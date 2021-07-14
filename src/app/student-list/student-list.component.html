@@ -1,0 +1,25 @@
+<h2>Students List</h2>
+<ul class="student-list">
+    <li *ngFor="let student of student"
+      [class.selected]="student === selectedStudent "
+      (click)="onSelect(student)">
+      <span class="badge">{{student.id}}</span> {{student.name}}
+    </li>
+  </ul>
+  <div *ngIf="selectedStudent">
+
+    <h2>{{selectedStudent.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedStudent.id}}</div>
+    <div>
+       <div><label for="student-name">Student name: </label>
+       <input id="student-name" [(ngModel)]= "selectedStudent.name"  placeholder="name" >
+       </div>
+       <div><label for="student-name">Student Description: </label>
+        <input id="student-name" [(ngModel)]= "selectedStudent.description"  placeholder="email" >
+        </div>
+        <div><label for="student-name">Student Email: </label>
+            <input id="student-name" [(ngModel)]= "selectedStudent.email"  placeholder="email" >
+            </div>
+    </div>
+  
+  </div>
