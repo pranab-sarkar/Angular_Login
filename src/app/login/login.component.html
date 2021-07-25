@@ -1,12 +1,21 @@
-<form>
-    <p> Welcome to  Login Page</p>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="username" class="form-control" name="username" [(ngModel)]="username">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control"  name="password" [(ngModel)]="password">
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="LogInStudent()">Submit</button>
-</form>
+<!DOCTYPE html>    
+<html>        
+<body>    
+    <h1>Login Page</h1><br>    
+    <div class="login">    
+    <form>  
+        <label><b>Email Account     
+        </b>    
+        </label>    
+        <input type="username" class="form-control" name="username" [(ngModel)]="username"> 
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="password" class="form-control"  name="password" [(ngModel)]="password"> 
+        <br><br>    
+        <button type="submit" class="btn btn-primary" (click)="LogInStudent()">Submit</button>   
+    </form>     
+</div>    
+</body>    
+</html>     
